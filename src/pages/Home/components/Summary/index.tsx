@@ -40,8 +40,8 @@ export function Summary() {
   const [userData, setUserData] = useState<any>(null); // Estado que armazena os dados da API
   const [loading, setLoading] = useState<boolean>(true); // Estado que controla o carregamento
 
-  const username = "lucaspedronet";
-  const repositorio = "BlogProfileGitHub";
+  const username = "mathpimentel"; //Testa o facebook
+  const repositorio = "BlogProfileGitHub"; // Testa react
 
   useEffect(() => {
     getGitHubUser(username).then((data) => {
