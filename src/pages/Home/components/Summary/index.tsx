@@ -46,7 +46,6 @@ export function Summary() {
   useEffect(() => {
     getGitHubUser(username).then((data) => {
       if (data) {
-        console.log(data);
         setUserData(data); // Atualiza o estado dos dados do usuário
       }
       setLoading(false); // Finaliza o carregamento
