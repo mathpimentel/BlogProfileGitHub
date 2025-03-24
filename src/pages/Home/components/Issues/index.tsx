@@ -9,7 +9,6 @@ export async function getGitHubIssues(username: string, repo: string) {
     timeout: 5000, // Tempo máximo para a requisição
     headers: {
       "Content-Type": "application/json", // Tipo de conteúdo para a requisição
-      Authorization: `token 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`,
     },
   });
 
@@ -51,15 +50,16 @@ export function Issues({ username, repo }: { username: string; repo: string }) {
       {issues.map((issue: any) => (
         <IssuesCard key={issue.id}>
           <StyledNavLink
-            to={`https://github.com/${username}/${repo}/issues/${issue.number}`} target="_blank"
+            to={`https://github.com/${username}/${repo}/issues/${issue.number}`}
+            target="_blank"
           >
             <div>
               <h2>{issue.title}</h2>
               <span>{new Date(issue.created_at).toLocaleDateString()}</span>
             </div>
           </StyledNavLink>
-          
-            <p>{issue.body ? issue.body.substring(0, 100) : "Sem descrição"}</p>
+
+          <p>{issue.body ? issue.body.substring(0, 100) : "Sem descrição"}</p>
         </IssuesCard>
       ))}
     </IssuesContainer>

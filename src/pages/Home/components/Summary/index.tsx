@@ -10,7 +10,6 @@ export async function getGitHubUser(username: string) {
     timeout: 5000, // Tempo máximo para a requisição
     headers: {
       "Content-Type": "application/json", // Tipo de conteúdo para a requisição
-      Authorization: `token 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`,
     },
   });
 
