@@ -14,6 +14,7 @@ export async function getGitHubIssues(username: string, repo: string) {
 
   try {
     const response = await issueApi.get(`${username}/${repo}/issues`);
+    // console.log(response.data)
     return response.data;
   } catch (error: any) {
     console.error(

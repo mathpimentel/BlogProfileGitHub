@@ -5,6 +5,7 @@ import axios from "axios";
 import { Issues } from "../Issues";
 
 export async function getGitHubUser(username: string) {
+  
   const userApi = axios.create({
     baseURL: "https://api.github.com/users/", // URL base para as requisições
     timeout: 5000, // Tempo máximo para a requisição
@@ -53,11 +54,11 @@ export function Summary() {
   }, []); // Executa apenas uma vez o componente
 
   if (loading) {
-    return <div> Aguarde, carregando os dados do GitHub...</div>;
+    return <div style={{padding: "1rem 0"}}> Aguarde, carregando os dados do GitHub...</div>;
   }
 
   if (!userData) {
-    return <div> Usuário não encontrado</div>;
+    return <div style={{padding: "1rem 0"}}> Usuário não encontrado</div>;
   }
 
   return (
