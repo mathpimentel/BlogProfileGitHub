@@ -6,6 +6,7 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const IssuesContainer = styled.div`
+  margin-top: 2rem;
   max-width: 26rem;
   height: 16.25rem;
   width: 100%;
